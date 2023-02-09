@@ -1,0 +1,64 @@
+.slider {
+  position: relative;
+  min-width: 320px;
+  background-color: @color-background-beige;
+}
+
+.slider__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider__button {
+  position: absolute;
+  width: 11px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+
+  &--before {
+    left: 4px;
+    top: 328px;
+  }
+
+  &--next {
+    right: 4px;
+    top: 328px;
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    background: transparent;
+    cursor: auto;
+  }
+}
+
+.slider__button:disabled .slider__button-icon {
+  color: @color-base-grey;
+}
+
+.slider__button-icon {
+  position: absolute;
+  color: @color-base-primary;
+
+  &--before {
+    left: 0;
+    top: 0;
+  }
+
+  &--next {
+    right: 0;
+    top: 0;
+  }
+}

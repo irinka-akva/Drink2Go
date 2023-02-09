@@ -1,0 +1,97 @@
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.advantages__title {
+  margin: 0;
+  padding-bottom: 36px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item:not(:last-child) {
+  padding-bottom: 32px;
+}
+
+.advantages__item-title {
+  margin: 0;
+  padding-top: 66px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+
+  &--time::before {
+    .pseudo ();
+    width: 48px;
+    height: 55px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("../../img/advantages-time.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &--pocket::before {
+    .pseudo ();
+    width: 52px;
+    height: 56px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("../../img/advantages-pocket.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &--lightning::before {
+    .pseudo ();
+    width: 48px;
+    height: 63px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("../../img/advantages-lightning.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &--ecology::before {
+    .pseudo ();
+    width: 48px;
+    height: 58px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("../../img/advantages-ecology.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.advantages__item-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}

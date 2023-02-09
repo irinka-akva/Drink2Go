@@ -1,5 +1,45 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  min-height: 60px;
+  min-width: 320px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 60px;
+  border-bottom: 1px solid @color-base-secondary;
+}
+
+.header__logo {
+  padding: 0 20px;
+  max-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-link {
+  display: block;
+}
+
+.header__logo:hover .header__logo-img {
+  opacity: 0.8;
+}
+
+
+.header__logo:focus .header__logo-img {
+  opacity: 0.5;
+}
+
+.header__logo:focus {
+  outline: none;
+}
+
+.header__logo:active .header__logo-img {
+  opacity: 0.6;
 }
