@@ -1,9 +1,82 @@
 .button {
-  display: inline-block;
   background-color: @color-base-primary;
   color: @color-base-white;
   border-radius: 4px;
   border: none;
-  padding: 8px 20px;
+  padding: 8px 8px;
+  font-family: @main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: @color-base-primary-lighter;
+  }
+
+  &:active {
+    background-color: @color-base-primary-darker;
+  }
+
+  &:disabled {
+    background-color: @color-base-grey;
+  }
+
+  &--slider {
+    min-width: 116px;
+  }
+
+  &--submit {
+    width: 160px;
+    min-height: 45px;
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  &--reset {
+    width: 160px;
+    min-height: 45px;
+    background-color: @color-base-white;
+    color: @color-base-primary;
+    font-size: 14px;
+    line-height: 24px;
+
+    &:hover,
+    &:focus {
+      background-color: @color-base-primary-lighter;
+      color: @color-base-white;
+    }
+
+    &:active {
+      background-color: @color-base-primary-darker;
+      color: @color-base-white;
+    }
+
+    &:disabled {
+      background-color: @color-light-grey;
+      color: @color-base-white;
+    }
+  }
+
+  &--card {
+    position: relative;
+    padding: 8px 20px 8px 46px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+
+    &::before {
+      .pseudo();
+      width: 20px;
+      height: 16px;
+      top: 10px;
+      left: 20px;
+      background-image: url("../../img/basket-button.svg");
+
+    }
+  }
 }
