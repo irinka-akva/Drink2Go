@@ -2,43 +2,160 @@
   padding-top: 20px;
   padding-bottom: 60px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 84px;
+    position: relative;
+  }
+
   &--white {
     background-color: @color-background-beige;
+
+    @media (min-width: @tablet-width) {
+      background-image: linear-gradient(@color-background-beige 77%, transparent 77%);
+      background-color: transparent;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @color-background-beige;
+    }
   }
 
   &--lavender {
     background-color: @color-background-lavender;
+
+    @media (min-width: @tablet-width) {
+      background-image: linear-gradient(@color-background-lavender 77%, transparent 77%);
+      background-color: transparent;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @color-background-lavender;
+    }
   }
 
   &--black {
     background-color: @color-background-grey;
+
+    @media (min-width: @tablet-width) {
+      background-image: linear-gradient(@color-background-grey 77%, transparent 77%);
+      background-color: transparent;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @color-background-grey;
+    }
+  }
+}
+
+.slider-card-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
   }
 }
 
 .slider-card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slider-card-img-wrapper {
   width: 280px;
   height: 280px;
-  padding-bottom: 10px;
-  display: block;
+  margin-bottom: 10px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin-left: 65px;
+
+  }
+}
+
+.slider-card-img-flex {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    order: 0;
+    width: 50%;
+  }
+}
+
+.slider-card-info-wrapper {
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    padding-top: 150px;
+    padding-left: 15px;
+  }
 }
 
 .slider-card__title {
   margin: 0;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
   text-align: center;
+  min-height: 96px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 80px;
+    order: 2;
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .slider-card__text {
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  min-height: 100px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 96px;
+    order: 3;
+    font-size: 20px;
+    line-height: 32px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 90px;
+    margin-bottom: 40px;
+  }
 }
 
 .slider-card__old-price {
@@ -59,5 +176,45 @@
 .slider-card__price-wrapper {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 4;
+    justify-content: flex-start;
+  }
+}
+
+.slider-card__marker-list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    width: 202px;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.slider-card__marker-item {
+  @media (min-width: @desktop-width) {
+    width: 62px;
+    height: 4px;
+    background-color: @color-base-white;
+    margin-right: 8px;
+
+    &--current {
+      background-color: @color-base-primary;
+    }
+  }
 
 }

@@ -13,46 +13,62 @@
     <div class="header__wrapper">
       <div class="header__logo">
         <a class="header__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="header__logo-img" src="img/logo.svg" width="32" height="36"
-            alt="Интернет-магазин кофейных напитков.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo.svg" width="32" height="36" alt="Логотип интернет-магазина.">
+          </picture>
         </a>
+        <span class="header__logo-text">Интернет-магазин кофейных напитков</span>
       </div>
-      <nav class="header__navigation navigation">
-        <ul class="navigation__list navigation__list--user">
-          <li class="navigation__item navigation__item--user">
-            <a class="navigation__link navigation__link--user" href="index.html">
-              <img src="img/user.svg" width="16" height="16" alt="Аккаунт пользователя.">
+      <div class="header__user-navigation">
+        <ul class="header__user-navigation-list">
+          <li class="header__user-navigation-item header__user-navigation-item--user">
+            <a class="header__user-navigation-link" href="index.html">
+              <svg class="header__user-navigation-icon" width="16" height="16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.7 4a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0ZM12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-8.8 8.3c1.2-1 3-1.6 4.8-1.6 1.8 0 3.6.6 4.8 1.6 1.2 1 1.9 2.4 1.9 3.7H16c0-1.8-.8-3.5-2.3-4.7a8.9 8.9 0 0 0-5.7-2c-2.1 0-4.2.7-5.7 2A6.2 6.2 0 0 0 0 16h1.3c0-1.3.7-2.7 1.9-3.7Z" />
+              </svg>
+              <span class="header__user-navigation-text">Войти</span>
+              <span class="visually-hidden">Аккаунт пользователя.</span>
             </a>
           </li>
-          <li class="navigation__item navigation__item--user">
-            <a class="navigation__link navigation__link--user" href="index.html">
-              <img src="img/basket.svg" width="16" height="16" alt="Корзина.">
+          <li class="header__user-navigation-item header__user-navigation-item--basket">
+            <a class="header__user-navigation-link" href="index.html">
+              <svg class="header__user-navigation-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z" />
+              </svg>
+              <span class="header__user-navigation-text">Корзина</span>
+              <span class="visually-hidden">Перейти в корзину.</span>
             </a>
-          </li>
-          <li class="navigation__item navigation__item--user">
-            <button class="navigation__toggle">
-              <img src="img/menu-burger.svg" width="16" height="16" alt="Открыть меню.">
-            </button>
           </li>
         </ul>
+      </div>
+      <nav class="navigation navigation--no-js">
+        <button class="navigation__toggle">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <div class="navigation__container">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html">Каталог</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html">Доставка</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html">О нас</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
-    <nav class="header__navigation navigation">
-      <ul class="navigation__list navigation__list--menu">
-        <li class="navigation__item navigation__item--menu">
-          <a class="navigation__link navigation__link--menu" href="index.html">Главная</a>
-        </li>
-        <li class="navigation__item navigation__item--menu">
-          <a class="navigation__link navigation__link--menu" href="index.html">Каталог</a>
-        </li>
-        <li class="navigation__item navigation__item--menu">
-          <a class="navigation__link navigation__link--menu" href="index.html">Доставка</a>
-        </li>
-        <li class="navigation__item navigation__item--menu">
-          <a class="navigation__link navigation__link--menu" href="index.html">О нас</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main class="main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
@@ -79,48 +95,124 @@
       <ul class="slider__list">
         <li class="slider__item slider-card slider-card--white">
           <div class="container">
-            <img class="slider-card__img" src="img/flat-white-slider-mobile.png" width="280" height="280" alt="">
-            <span class="slider-card__text-new text-addition">Новинка!</span>
-            <h3 class="slider-card__title">Декаф Флэт Уайт</h3>
-            <p class="slider-card__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
-              то,
-              что нужно для
-              расслабления после тяжёлого рабочего дня</p>
-            <div class="slider-card__price-wrapper">
-              <span class="slider-card__old-price"><s>295₽</s></span>
-              <span class="slider-card__new-price">225₽</span>
-              <a class="slider-card__button button button--slider" href="#">Заказать</a>
+            <div class="slider-card-wrapper">
+              <div class="slider-card-img-flex">
+                <div class="slider-card-img-wrapper">
+                  <picture>
+                    <!-- <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/catalog-img/catalog-buckwheat-1-tablet.webp 1x, img/catalog-img/catalog-buckwheat-1-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/catalog-img/catalog-buckwheat-1.webp 1x, img/catalog-img/catalog-buckwheat-1-2x.webp 2x"> -->
+
+                    <source media="(min-width: 1440px)"
+                      srcset="img/flat-white-slider-desktop.png, img/flat-white-slider-desktop-2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/flat-white-slider-tablet.png, img/flat-white-slider-tablet-2x.png 2x">
+                    <img class="slider-card__img" src="img/flat-white-slider-mobile.png"
+                      srcset="img/flat-white-slider-mobile-2x.png" width="280" height="280" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="slider-card-info-wrapper">
+                <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
+                <h3 class="slider-card__title">Декаф Флэт Уайт</h3>
+                <p class="slider-card__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  —
+                  то,
+                  что нужно для
+                  расслабления после тяжёлого рабочего дня</p>
+                <div class="slider-card__price-wrapper">
+                  <span class="slider-card__old-price"><s>295₽</s></span>
+                  <span class="slider-card__new-price">225₽</span>
+                  <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                </div>
+              </div>
             </div>
           </div>
+          <ul class="slider-card__marker-list">
+            <li class="slider-card__marker-item slider-card__marker-item--current"></li>
+            <li class="slider-card__marker-item"></li>
+            <li class="slider-card__marker-item"></li>
+          </ul>
         </li>
         <li class="slider__item slider-card slider-card--lavender">
           <div class="container">
-            <img class="slider-card__img" src="img/lavender-slider-mobile.png" width="280" height="280" alt="">
-            <span class="slider-card__text-new text-addition">Новинка!</span>
-            <h3 class="slider-card__title">Лавандовый Латте</h3>
-            <p class="slider-card__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
-              лавандовым
-              сиропом унесёт вас прямо на вершину Радужных гор</p>
-            <div class="slider-card__price-wrapper">
-              <span class="slider-card__old-price"><s>285₽</s></span>
-              <span class="slider-card__new-price">265₽</span>
-              <a class="slider-card__button button button--slider" href="#">Заказать</a>
+            <div class="slider-card-wrapper">
+              <div class="slider-card-img-flex">
+                <div class="slider-card-img-wrapper">
+                  <picture>
+                    <!-- <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/catalog-img/catalog-buckwheat-1-tablet.webp 1x, img/catalog-img/catalog-buckwheat-1-tablet-2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/catalog-img/catalog-buckwheat-1.webp 1x, img/catalog-img/catalog-buckwheat-1-2x.webp 2x"> -->
+
+                    <source media="(min-width: 1440px)"
+                      srcset="img/lavender-slider-desktop.png, img/lavender-slider-desktop-2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/lavender-slider-tablet.png, img/lavender-slider-tablet-2x.png 2x">
+                    <img class="slider-card__img" src="img/lavender-slider-mobile.png"
+                      srcset="img/lavender-slider-mobile-2x.png" width="280" height="280" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="slider-card-info-wrapper">
+                <span class="slider-card__text-new text-addition">Новинка!</span>
+                <h3 class="slider-card__title">Лавандовый Латте</h3>
+                <p class="slider-card__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                  лавандовым
+                  сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="slider-card__price-wrapper">
+                  <span class="slider-card__old-price"><s>285₽</s></span>
+                  <span class="slider-card__new-price">265₽</span>
+                  <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                </div>
+              </div>
             </div>
           </div>
+          <ul class="slider-card__marker-list">
+            <li class="slider-card__marker-item"></li>
+            <li class="slider-card__marker-item slider-card__marker-item--current"></li>
+            <li class="slider-card__marker-item"></li>
+          </ul>
         </li>
         <li class="slider__item slider-card slider-card--black">
           <div class="container">
-            <img class="slider-card__img" src="img/espresso-slider-mobile.png" width="280" height="280" alt="">
-            <span class="slider-card__text-new text-addition">Новинка!</span>
-            <h3 class="slider-card__title">Тройной Эспрессо</h3>
-            <p class="slider-card__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
-              Колумбии покажет вам, что такое настоящая бодрость</p>
-            <div class="slider-card__price-wrapper">
-              <span class="slider-card__old-price"><s>395₽</s></span>
-              <span class="slider-card__new-price">375₽</span>
-              <a class="slider-card__button button" href="#">Заказать</a>
+            <div class="slider-card-wrapper">
+              <div class="slider-card-img-flex">
+                <div class="slider-card-img-wrapper">
+                  <picture>
+                    <!-- <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/catalog-img/catalog-buckwheat-1-tablet.webp 1x, img/catalog-img/catalog-buckwheat-1-tablet-2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/catalog-img/catalog-buckwheat-1.webp 1x, img/catalog-img/catalog-buckwheat-1-2x.webp 2x"> -->
+
+                    <source media="(min-width: 1440px)"
+                      srcset="img/espresso-slider-desktop.png, img/espresso-slider-desktop-2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/espresso-slider-tablet.png, img/espresso-slider-tablet-2x.png 2x">
+                    <img class="slider-card__img" src="img/espresso-slider-mobile.png"
+                      srcset="img/espresso-slider-mobile-2x.png" width="280" height="280" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="slider-card-info-wrapper">
+                <span class="slider-card__text-new text-addition">Новинка!</span>
+                <h3 class="slider-card__title">Тройной Эспрессо</h3>
+                <p class="slider-card__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                  Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="slider-card__price-wrapper">
+                  <span class="slider-card__old-price"><s>395₽</s></span>
+                  <span class="slider-card__new-price">375₽</span>
+                  <a class="slider-card__button button" href="#">Заказать</a>
+                </div>
+              </div>
             </div>
           </div>
+          <ul class="slider-card__marker-list">
+            <li class="slider-card__marker-item"></li>
+            <li class="slider-card__marker-item"></li>
+            <li class="slider-card__marker-item slider-card__marker-item--current"></li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -263,23 +355,23 @@
               <button class="button button--submit" type="submit">Применить фильтр</button>
               <button class="button button--reset" type="reset">Сбросить фильтр</button>
             </div>
-            <div class="form__select-wrapper">
-              <span class="form__select-text">Сортировка:</span>
-              <select class="form__select">
-                <option class="form__select-item" value="default">по умолчанию</option>
-                <option class="form__select-item" value="expensive">сначала дорогие</option>
-                <option class="form__select-item" value="cheap">сначала дешёвые</option>
-                <option class="form__select-item" value="high-rating">высокий рейтинг</option>
-              </select>
-            </div>
           </form>
         </section>
         <section class="goods-catalog">
           <h2 class="visually-hidden">Сортировка каталога товаров.</h2>
+          <div class="goods-catalog__select-wrapper">
+            <span class="goods-catalog__select-text">Сортировка:</span>
+            <select class="goods-catalog__select">
+              <option class="goods-catalog__select-item" value="default">по умолчанию</option>
+              <option class="goods-catalog__select-item" value="expensive">сначала дорогие</option>
+              <option class="goods-catalog__select-item" value="cheap">сначала дешёвые</option>
+              <option class="goods-catalog__select-item" value="high-rating">высокий рейтинг</option>
+            </select>
+          </div>
           <ul class="goods-catalog__list cards-list">
             <li class="cards-list__item card">
               <a class="card__link" href="#">
-                <img class="card__link-img" src="img/catalog-coffee-1-mobile.png" alt="" width="130" height="188">
+                <img class="card__link-img" src="img/catalog-coffee-1.png" alt="" width="130" height="188">
               </a>
               <a class="card__link" href="#">
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -293,7 +385,7 @@
             </li>
             <li class="cards-list__item card">
               <a class="card__link" href="#">
-                <img class="card__link-img" src="img/catalog-coffee-2-mobile.png" alt="" width="130" height="188">
+                <img class="card__link-img" src="img/catalog-coffee-2.png" alt="" width="130" height="188">
               </a>
               <a class="card__link" href="#">
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -307,7 +399,7 @@
             </li>
             <li class="cards-list__item card">
               <a class="card__link" href="#">
-                <img class="card__link-img" src="img/catalog-coffee-3-mobile.png" alt="" width="130" height="188">
+                <img class="card__link-img" src="img/catalog-coffee-3.png" alt="" width="130" height="188">
               </a>
               <a class="card__link" href="#">
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -321,7 +413,7 @@
             </li>
             <li class="cards-list__item card">
               <a class="card__link" href="#">
-                <img class="card__link-img" src="img/catalog-coffee-4-mobile.png" alt="" width="130" height="188">
+                <img class="card__link-img" src="img/catalog-coffee-4.png" alt="" width="130" height="188">
               </a>
               <a class="card__link" href="#">
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -335,7 +427,7 @@
             </li>
             <li class="cards-list__item card">
               <a class="card__link" href="#">
-                <img class="card__link-img" src="img/catalog-coffee-5-mobile.png" alt="" width="130" height="188">
+                <img class="card__link-img" src="img/catalog-coffee-5.png" alt="" width="130" height="188">
               </a>
               <a class="card__link" href="#">
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -349,7 +441,7 @@
             </li>
             <li class="cards-list__item card">
               <a class="card__link" href="#">
-                <img class="card__link-img" src="img/catalog-coffee-6-mobile.png" alt="" width="130" height="188">
+                <img class="card__link-img" src="img/catalog-coffee-6.png" alt="" width="130" height="188">
               </a>
               <a class="card__link" href="#">
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -406,7 +498,7 @@
       <div class="internet-contacts__wrapper container">
         <h2 class="visually-hidden">Раздел с контактами.</h2>
         <a class="internet-contacts__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="img/logo-short.svg" alt="Интернет-магазин кофейных напитков." width="82" height="36">
+          <img src="img/logo-tablet.svg" alt="Интернет-магазин кофейных напитков." width="82" height="36">
         </a>
         <ul class="internet-contacts__list">
           <li class="internet-contacts__list-item internet-contacts__list-item--vk">
@@ -519,7 +611,6 @@
       </div>
     </section>
   </footer>
-
   <script src="./js/script.js" defer></script>
 </body>
 

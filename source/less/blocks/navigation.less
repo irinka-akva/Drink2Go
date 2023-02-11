@@ -1,5 +1,11 @@
 .navigation {
-  min-width: 180px;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    max-width: 399px;
+  }
 }
 
 .navigation__list {
@@ -8,79 +14,151 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  flex-direction: column;
+  width: 100%;
 
-  &--menu {
-    flex-direction: column;
-    width: 100%;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: auto;
   }
 }
 
 .navigation__toggle {
-  border: none;
+  position: absolute;
   padding: 0;
+  right: 0;
+  top: -60px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
-  min-width: 60px;
-  min-height: 60px;
   cursor: pointer;
-  &:hover {
-    background-color: @color-base-secondary;
-    opacity: 0.5;
-  }
-  &:focus {
-    background-color: @color-base-secondary;
-    opacity: 1;
-  }
+  border: none;
+
   &:active {
     background-color: @color-base-secondary;
-    opacity: 1;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .navigation--close .navigation__toggle::before {
+    .pseudo ();
+    top: 25px;
+    right: 20px;
+    width: 16px;
+    height: 1.5px;
+    background-color: @color-main-text;
+    box-shadow: 0 6px 0 0 @color-main-text, 0 12px 0 0 @color-main-text;
+  }
+
+  .navigation--close .navigation__toggle:hover::before,
+  .navigation--close .navigation__toggle:focus::before {
+    background-color: @color-base-primary-lighter;
+    box-shadow:
+      0 6px 0 0 @color-base-primary-lighter,
+      0 12px 0 0 @color-base-primary-lighter;
+  }
+
+  .navigation--close .navigation__toggle:active::before {
+    background-color: @color-main-text;
+    box-shadow:
+      0 6px 0 0 @color-main-text,
+      0 12px 0 0 @color-main-text;
+  }
+
+  .navigation--close .navigation__toggle:focus {
+    outline: none;
+  }
+
+  .navigation--open .navigation__toggle::before,
+  .navigation--open .navigation__toggle::after {
+    .pseudo ();
+    top: 50%;
+    right: 20px;
+    width: 20px;
+    height: 1.5px;
+    background-color: @color-main-text;
+  }
+
+  .navigation--open .navigation__toggle::before {
+    transform: rotate(45deg);
+  }
+
+  .navigation--open .navigation__toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  .navigation--open .navigation__toggle:hover::before,
+  .navigation--open .navigation__toggle:hover::after {
+    background-color: @color-base-primary-lighter;
+  }
+
+  .navigation--open .navigation__toggle:focus::before,
+  .navigation--open .navigation__toggle:focus::after {
+    background-color: @color-base-primary-lighter;
+  }
+
+  .navigation--open .navigation__toggle:focus {
+    outline: none;
+  }
+
+  .navigation--open .navigation__toggle:active::before,
+  .navigation--open .navigation__toggle:active::after {
+    background-color: @color-main-text;
+  }
+
+  .navigation--no-js .navigation__toggle {
+    display: none;
+  }
+
+  .navigation--close .navigation__container {
+    display: none;
   }
 }
 
 .navigation__item {
   display: flex;
-  &--menu {
-    min-height: 57px;
-    border-bottom: 1px solid @color-base-secondary;
-  }
+  min-height: 57px;
+  border-bottom: 1px solid @color-base-secondary;
 
-  &--user {
-    min-width: 60px;
-    min-height: 60px;
+  @media (min-width: @tablet-width) {
+    border: none;
+    min-height: 80px;
   }
+}
+
+.navigation__item:nth-child(1) {
+  border-top: 1px solid @color-base-secondary;
 }
 
 .navigation__link {
   margin: 0;
   padding: 10px;
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   color: @color-main-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 57px;
 
-  &:hover {
-    background-color: @color-base-secondary;
-    opacity: 0.5;
-  }
+  &:hover,
   &:focus {
-    background-color: @color-base-secondary;
-    opacity: 1;
+    color: @color-base-primary;
   }
+
   &:active {
     background-color: @color-base-secondary;
-    opacity: 1;
+    color: @color-main-text;
   }
 
-  &--user {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  &--menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 57px;
-
+  &--current {
+    @media (min-width: @tablet-width) {
+      border-bottom: 2px solid @color-base-primary;
+    }
   }
-
 }

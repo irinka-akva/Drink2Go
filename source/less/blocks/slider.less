@@ -1,7 +1,6 @@
 .slider {
   position: relative;
   min-width: 320px;
-  background-color: @color-background-beige;
 }
 
 .slider__list {
@@ -12,30 +11,45 @@
 
 .slider__button {
   position: absolute;
-  width: 11px;
-  height: 20px;
+  width: 40px;
+  height: 100%;
   background-color: transparent;
   border: none;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 77%;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 100%;
+  }
 
   &--before {
-    left: 4px;
-    top: 328px;
+    left: 0;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, @color-base-white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, @color-base-primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+    }
   }
 
   &--next {
-    right: 4px;
-    top: 328px;
-  }
+    right: 0;
 
-  &:hover,
-  &:focus {
-    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  }
+    &:hover,
+    &:focus {
+      background: linear-gradient(-90deg, @color-base-white 0%, rgba(255, 255, 255, 0) 100%);
+    }
 
-  &:active {
-    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    &:active {
+      background: linear-gradient(-90deg, @color-base-primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+    }
   }
 
   &:disabled {
@@ -53,12 +67,30 @@
   color: @color-base-primary;
 
   &--before {
-    left: 0;
-    top: 0;
+    left: 4px;
+    top: 318px;
+
+    @media (min-width: @tablet-width) {
+      top: 310px;
+      margin: 0 auto;
+      right: 0;
+    }
+    @media (min-width: @desktop-width) {
+      top: 347px;
+    }
   }
 
   &--next {
-    right: 0;
-    top: 0;
+    right: 4px;
+    top: 318px;
+
+    @media (min-width: @tablet-width) {
+      top: 310px;
+      margin: 0 auto;
+      left: 0;
+    }
+    @media (min-width: @desktop-width) {
+      top: 347px;
+    }
   }
 }
