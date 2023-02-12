@@ -1,29 +1,43 @@
 .card {
-  width: 100%;
   min-height: 420px;
   background-color: @color-base-white;
   padding: 40px 20px 20px 20px;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+    padding: 50px 30px 30px 30px;
+  }
 
   &:hover {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   }
 }
 
-.card__link-img {
+.card__link {
   width: 130px;
   height: 188px;
   margin: 0 auto;
   display: flex;
 }
 
+.card__link-img {
+  width: 100%;
+  height: auto;
+}
+
 .card__title {
-  padding: 24px 0 4px 0;
-  margin: 0;
+  margin: 24px 0 4px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   color: @color-main-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px 0 10px 0;
+  }
 }
 
 .card__text {
@@ -31,7 +45,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  padding-bottom: 18px;
+  margin-bottom: 18px;
+  min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 40px;
+    margin-bottom: 20px;
+  }
 }
 
 .card__price-wrapper {

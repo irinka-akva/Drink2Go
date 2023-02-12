@@ -1,13 +1,40 @@
 .catalog {
   background-color: @color-background-lightest-grey;
   padding-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .catalog__title {
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   text-align: center;
+  min-height: 72px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
 }
+
+.catalog__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1011px;
+    column-gap: 30px;
+  }
+}
+

@@ -1,17 +1,40 @@
 .pagination {
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .pagination__list {
   margin: 0;
   padding: 0;
-  width: 280px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.pagination__list-button-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: @color-base-primary;
+    background-color: transparent;
+  }
+}
+
+.pagination__list-button:hover .pagination__list-button-text,
+.pagination__list-button:focus .pagination__list-button-text,
+.pagination__list-button:active .pagination__list-button-text,
+.pagination__list-button:disabled .pagination__list-button-text {
+  @media (min-width: @tablet-width) {
+    color: @color-base-white;
+  }
+
 }
 
 .pagination__list-item {
@@ -27,11 +50,21 @@
   background-color: @color-base-white;
   border-radius: 4px;
 
+  @media (min-width: @tablet-width) {
+    &--arrow {
+      max-width: 120px;
+    }
+  }
+
   &--current {
     background-color: transparent;
     font-weight: 600;
     color: @color-main-text;
   }
+}
+
+.pagination__list-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .pagination__list-button {
@@ -41,6 +74,10 @@
   background-color: @color-base-white;
   border-radius: 4px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 20px;
+  }
 
   &:hover,
   &:focus {
@@ -66,6 +103,7 @@
 }
 
 .pagination__list-item--not-current {
+
   &:hover,
   &:focus {
     background-color: @color-base-primary-lighter;
@@ -85,7 +123,11 @@
 
 .pagination__list-button-icon {
   color: @color-base-primary;
-z-index: 2;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .pagination__list-button:hover .pagination__list-button-icon,
