@@ -15,6 +15,7 @@
 
 .pagination__list-button-text {
   display: none;
+  font-family: @main-font;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -34,7 +35,6 @@
   @media (min-width: @tablet-width) {
     color: @color-base-white;
   }
-
 }
 
 .pagination__list-item {
@@ -65,6 +65,7 @@
 
 .pagination__list-item:not(:last-child) {
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .pagination__list-button {
@@ -103,7 +104,6 @@
 }
 
 .pagination__list-item--not-current {
-
   &:hover,
   &:focus {
     background-color: @color-base-primary-lighter;

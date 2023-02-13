@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 21px;
-    margin-bottom: 20px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,13 +24,34 @@
 
 .form__legend {
   padding: 0;
-  margin-bottom: 22px;
+  margin-bottom: 33px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 31px;
+    margin-top: 10px;
+  }
+
+  &--milk {
+    margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--country {
     margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -42,12 +63,13 @@
 
   @media (min-width: @tablet-width) {
     width: 220px;
+    left: 7px;
   }
 
   @media (min-width: @desktop-width) {
     width: 320px;
+    left: 0;
   }
-
 }
 
 .form__range-bar {
@@ -63,7 +85,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 290px;
+    width: 288px;
   }
 }
 
@@ -82,8 +104,12 @@
   }
 
   &--max {
-    right: -10px;
+    right: -17px;
     top: -11px;
+
+    @media (min-width: @tablet-width) {
+      right: -11px;
+    }
   }
 
   &:disabled {
@@ -133,7 +159,7 @@
   width: 280px;
   position: relative;
   justify-content: space-between;
-  padding-top: 35px;
+  padding-top: 37px;
   padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
@@ -143,6 +169,8 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    padding-top: 32px;
+    padding-bottom: 13px;
   }
 
   &::before {
@@ -155,7 +183,6 @@
     margin: 0 auto;
     background-color: @color-base-grey;
   }
-
 }
 
 .form__range {
@@ -165,6 +192,7 @@
   border: 2px solid @color-base-primary-lighter;
   border-radius: 4px;
   padding: 5px;
+  padding-top: 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -173,11 +201,19 @@
   @media (min-width: @tablet-width) {
     width: 93px;
     height: 40px;
+
+    &--min {
+   margin-left: 5px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 118px;
-    height: 38px;
+    width: 135px;
+    height: 41px;
+
+    &--min {
+      margin-left: 0;
+       }
   }
 
   &::placeholder {
@@ -213,8 +249,19 @@
 .form__list-item {
   padding-bottom: 22px;
 
+  &--checkbox {
+    padding-bottom: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    &:last-child {
+      padding-bottom: 9px;
+    }
   }
 }
 
@@ -233,13 +280,14 @@
 }
 
 .form__label-radio {
+  display: block;
   padding-left: 34px;
   position: relative;
   cursor: pointer;
 }
 
-.form__radio:hover+.form__control-mark::before,
-.form__radio:focus+.form__control-mark::before {
+.form__radio:hover + .form__control-mark::before,
+.form__radio:focus + .form__control-mark::before {
   .pseudo ();
   top: 0;
   left: 0;
@@ -252,12 +300,12 @@
   border-radius: 50%;
 }
 
-.form__radio:hover+.form__control-mark,
-.form__radio:focus+.form__control-mark {
+.form__radio:hover + .form__control-mark,
+.form__radio:focus + .form__control-mark {
   border-color: @color-base-primary-lighter;
 }
 
-.form__radio:checked+.form__control-mark::before {
+.form__radio:checked + .form__control-mark::before {
   .pseudo ();
   top: 0;
   left: 0;
@@ -270,16 +318,16 @@
   border-radius: 50%;
 }
 
-.form__radio:checked+.form__control-mark {
+.form__radio:checked + .form__control-mark {
   border: 2px solid @color-base-primary;
 }
 
-.form__radio:disabled+.form__control-mark {
+.form__radio:disabled + .form__control-mark {
   border: 2px solid @color-light-grey;
   cursor: auto;
 }
 
-.form__radio:disabled+.form__control-mark::before {
+.form__radio:disabled + .form__control-mark::before {
   .pseudo ();
   top: 0;
   left: 0;
@@ -292,7 +340,7 @@
   border-radius: 50%;
 }
 
-.form__radio:checked:disabled+.form__control-mark::before {
+.form__radio:checked:disabled + .form__control-mark::before {
   .pseudo ();
   top: 0;
   left: 0;
@@ -305,12 +353,13 @@
   border-radius: 50%;
 }
 
-.form__radio:disabled~.form__text {
+.form__radio:disabled ~ .form__text {
   color: @color-light-grey;
   cursor: auto;
 }
 
 .form__label {
+  display: block;
   padding-left: 54px;
   position: relative;
   cursor: pointer;
@@ -343,13 +392,13 @@
   }
 }
 
-.form__checkbox:hover+.form__control-mark-checkbox,
-.form__checkbox:focus+.form__control-mark-checkbox {
+.form__checkbox:hover + .form__control-mark-checkbox,
+.form__checkbox:focus + .form__control-mark-checkbox {
   background-color: @color-base-primary-opacity;
   border: 2px solid @color-base-primary-lighter;
 }
 
-.form__checkbox:checked+.form__control-mark-checkbox::before {
+.form__checkbox:checked + .form__control-mark-checkbox::before {
   .pseudo ();
   top: 0;
   right: 0;
@@ -362,7 +411,7 @@
   border-radius: 50%;
 }
 
-.form__checkbox:disabled:checked+.form__control-mark-checkbox::before {
+.form__checkbox:disabled:checked + .form__control-mark-checkbox::before {
   .pseudo ();
   top: 0;
   right: 0;
@@ -375,22 +424,22 @@
   border-radius: 50%;
 }
 
-.form__checkbox:checked+.form__control-mark-checkbox {
+.form__checkbox:checked + .form__control-mark-checkbox {
   background-color: @color-base-primary;
   border: 2px solid transparent;
 }
 
-.form__checkbox:disabled+.form__control-mark-checkbox {
+.form__checkbox:disabled + .form__control-mark-checkbox {
   background-color: @color-light-grey;
   cursor: auto;
 }
 
-.form__checkbox:disabled:hover+.form__control-mark-checkbox {
+.form__checkbox:disabled:hover + .form__control-mark-checkbox {
   border: 2px solid transparent;
   cursor: auto;
 }
 
-.form__checkbox:disabled~.form__text {
+.form__checkbox:disabled ~ .form__text {
   color: @color-light-grey;
   cursor: auto;
 }
@@ -400,10 +449,16 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
+  padding-top: 14px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: center;
+    padding-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding-top: 22px;
   }
 }

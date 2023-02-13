@@ -1,12 +1,12 @@
 .internet-contacts {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid @color-base-secondary;
   min-height: 80px;
 
   @media (min-width: @tablet-width) {
     padding-top: 42px;
-    padding-bottom: 32px;
+    padding-bottom: 28px;
     border: none;
   }
 
@@ -27,6 +27,7 @@
     flex-direction: column;
     padding: 0;
     margin-right: 30px;
+    max-width: 318px;
   }
 }
 
@@ -70,8 +71,8 @@
   height: 36px;
 
   @media (min-width: @tablet-width) {
-    width: 154px;
-    height: 32px;
+    width: 170px;
+    height: 36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,6 +83,23 @@
 .internet-contacts__logo-icon {
   width: 100%;
   height: auto;
+}
+
+.internet-contacts__logo:hover .internet-contacts__logo-icon {
+  opacity: 0.8;
+}
+
+
+.internet-contacts__logo:focus .internet-contacts__logo-icon {
+  opacity: 0.5;
+}
+
+.internet-contacts__logo:focus {
+  outline: none;
+}
+
+.internet-contacts__logo:active .internet-contacts__logo-icon {
+  opacity: 0.6;
 }
 
 .internet-contacts__list-link-icon {

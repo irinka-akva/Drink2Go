@@ -16,6 +16,9 @@ a {
   box-sizing: border-box;
 }
 
+// Убираем стрелочки из инпута во всех браузерах
+/*stylelint-disable*/
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -27,3 +30,5 @@ input[type="number"]:focus {
     appearance: none;
     -moz-appearance: textfield;
 }
+
+/*stylelint-enable*/

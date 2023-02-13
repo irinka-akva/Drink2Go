@@ -1,12 +1,12 @@
 .goods-catalog {
-  padding-bottom: 44px;
+  padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 90px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 120px;
+    padding-bottom: 100px;
   }
 }
 
@@ -27,41 +27,58 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  padding-right: 5px;
+  padding-right: 1px;
+  align-items: flex-end;
+  align-self: center;
 }
 
 .goods-catalog__select-wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+  display: flex;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    justify-content: flex-end;
   }
 
   @media (min-width: @desktop-width) {
     text-align: end;
+    margin-bottom: 24px;
   }
 }
 
 .goods-catalog__select {
+  display: inline-block;
   border: none;
-  width: 165px;
+  min-width: 150px;
+  max-width: 165px;
   height: 32px;
   background-color: transparent;
   color: @color-base-primary;
+  font-family: @main-font;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   text-align: right;
-  text-align: center;
-  padding: 1px;
+  padding: 0;
 
-  &:hover,
-  &:focus {
-    background-color: @color-base-secondary;
-    border-radius: 4px;
+  @media (min-width: @tablet-width) {
+    max-width: 350px;
+    margin-right: 3px;
   }
 
-  &:focus-visible {
-    outline: none;
+  @media (min-width: @desktop-width) {
+    max-width: 550px;
+    margin-right: 3px;
+
+    &:hover,
+    &:focus {
+      background-color: @color-base-secondary;
+      border-radius: 4px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 }
