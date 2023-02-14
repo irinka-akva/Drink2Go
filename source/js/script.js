@@ -16,7 +16,7 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-/* map*/
+/* map leaflet*/
 
 const map = L.map('map')
   .setView({
@@ -49,4 +49,15 @@ const mainPinMarker = L.marker(
 
 mainPinMarker.addTo(map);
 
-/* slider*/
+/* slider swiper*/
+
+const swiper = new Swiper(".slider__container", {
+  navigation: {
+    nextEl: '.slider__button--next',
+    prevEl: '.slider__button--before',
+  },
+  pagination: {
+    el: '.slider__pagination',
+    clickable: true,
+  },
+});

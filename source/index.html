@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -78,150 +79,141 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
     <section class="slider">
       <h2 class="visually-hidden">Слайдер с вариантами напитков</h2>
-      <button class="slider__button slider__button--before" type="button">
-        <svg class="slider__button-icon slider__button-icon--before" width="11" height="20" viewBox="0 0 11 20"
-          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M9.71661 0L11 1.32082L2.56677 10L11 18.6792L9.71661 20L0 10L9.71661 0Z" />
-        </svg>
-        <span class="visually-hidden">Переключение
-          слайдера
-          назад</span></button>
-      <button class="slider__button slider__button--next" type="button">
-        <svg class="slider__button-icon slider__button-icon--next" width="11" height="20" viewBox="0 0 11 20"
-          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M1.28339 0L0 1.32082L8.43323 10L0 18.6792L1.28339 20L11 10L1.28339 0Z" />
-        </svg>
-        <span class="visually-hidden">Переключение
-          слайдера
-          вперед</span></button>
-      <ul class="slider__list">
-        <li class="slider__item slider-card slider-card--white">
-          <div class="container">
-            <div class="slider-card-wrapper">
-              <div class="slider-card-img-flex">
-                <div class="slider-card-img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/flat-white-slider-desktop.webp 1x, img/flat-white-slider-desktop-2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/flat-white-slider-tablet.webp 1x, img/flat-white-slider-tablet-2x.webp 2x">
-                    <source type="image/webp"
-                      srcset="img/flat-white-slider-mobile.webp 1x, img/flat-white-slider-mobile-2x.webp 2x">
+      <div class="slider__container swiper-container">
+        <ul class="slider__list swiper-wrapper">
+          <li class="slider__item slider-card slider-card--white swiper-slide">
+            <div class="container">
+              <div class="slider-card-wrapper">
+                <div class="slider-card-img-flex">
+                  <div class="slider-card-img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/flat-white-slider-desktop.webp 1x, img/flat-white-slider-desktop-2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/flat-white-slider-tablet.webp 1x, img/flat-white-slider-tablet-2x.webp 2x">
+                      <source type="image/webp"
+                        srcset="img/flat-white-slider-mobile.webp 1x, img/flat-white-slider-mobile-2x.webp 2x">
 
-                    <source media="(min-width: 1440px)"
-                      srcset="img/flat-white-slider-desktop.png, img/flat-white-slider-desktop-2x.png 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/flat-white-slider-tablet.png, img/flat-white-slider-tablet-2x.png 2x">
-                    <img class="slider-card__img" src="img/flat-white-slider-mobile.png"
-                      srcset="img/flat-white-slider-mobile-2x.png 2x" width="280" height="280" alt="">
-                  </picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/flat-white-slider-desktop.png, img/flat-white-slider-desktop-2x.png 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/flat-white-slider-tablet.png, img/flat-white-slider-tablet-2x.png 2x">
+                      <img class="slider-card__img" src="img/flat-white-slider-mobile.png"
+                        srcset="img/flat-white-slider-mobile-2x.png 2x" width="280" height="280" alt="">
+                    </picture>
+                  </div>
                 </div>
-              </div>
-              <div class="slider-card-info-wrapper">
-                <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
-                <h3 class="slider-card__title">Декаф Флэт Уайт</h3>
-                <p class="slider-card__text">Свежесваренный кофе без кофеина из Эфиопии <br> с натуральным фермерским
-                  молоком — то, что нужно <br> для расслабления после тяжёлого рабочего дня</p>
-                <div class="slider-card__price-wrapper">
-                  <span class="slider-card__old-price"><s>295₽</s></span>
-                  <span class="slider-card__new-price">225₽</span>
-                  <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                <div class="slider-card-info-wrapper">
+                  <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
+                  <h3 class="slider-card__title">Декаф Флэт Уайт</h3>
+                  <p class="slider-card__text">Свежесваренный кофе без кофеина из Эфиопии <br> с натуральным фермерским
+                    молоком — то, что нужно <br> для расслабления после тяжёлого рабочего дня</p>
+                  <div class="slider-card__price-wrapper">
+                    <span class="slider-card__old-price"><s>295₽</s></span>
+                    <span class="slider-card__new-price">225₽</span>
+                    <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <ul class="slider-card__marker-list">
-            <li class="slider-card__marker-item slider-card__marker-item--current"></li>
-            <li class="slider-card__marker-item"></li>
-            <li class="slider-card__marker-item"></li>
-          </ul>
-        </li>
-        <li class="slider__item slider-card slider-card--lavender">
-          <div class="container">
-            <div class="slider-card-wrapper">
-              <div class="slider-card-img-flex">
-                <div class="slider-card-img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/lavender-slider-desktop.webp 1x, img/lavender-slider-desktop-2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/lavender-slider-tablet.webp 1x, img/lavender-slider-tablet-2x.webp 2x">
-                    <source type="image/webp"
-                      srcset="img/lavender-slider-mobile.webp 1x, img/lavender-slider-mobile-2x.webp 2x">
+          </li>
+          <li class="slider__item slider-card slider-card--lavender swiper-slide">
+            <div class="container">
+              <div class="slider-card-wrapper">
+                <div class="slider-card-img-flex">
+                  <div class="slider-card-img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/lavender-slider-desktop.webp 1x, img/lavender-slider-desktop-2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/lavender-slider-tablet.webp 1x, img/lavender-slider-tablet-2x.webp 2x">
+                      <source type="image/webp"
+                        srcset="img/lavender-slider-mobile.webp 1x, img/lavender-slider-mobile-2x.webp 2x">
 
-                    <source media="(min-width: 1440px)"
-                      srcset="img/lavender-slider-desktop.png, img/lavender-slider-desktop-2x.png 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/lavender-slider-tablet.png, img/lavender-slider-tablet-2x.png 2x">
-                    <img class="slider-card__img" src="img/lavender-slider-mobile.png"
-                      srcset="img/lavender-slider-mobile-2x.png 2x" width="280" height="280" alt="">
-                  </picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/lavender-slider-desktop.png, img/lavender-slider-desktop-2x.png 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/lavender-slider-tablet.png, img/lavender-slider-tablet-2x.png 2x">
+                      <img class="slider-card__img" src="img/lavender-slider-mobile.png"
+                        srcset="img/lavender-slider-mobile-2x.png 2x" width="280" height="280" alt="">
+                    </picture>
+                  </div>
                 </div>
-              </div>
-              <div class="slider-card-info-wrapper">
-                <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
-                <h3 class="slider-card__title">Лавандовый Латте</h3>
-                <p class="slider-card__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
-                  лавандовым
-                  сиропом унесёт вас прямо на вершину Радужных гор</p>
-                <div class="slider-card__price-wrapper">
-                  <span class="slider-card__old-price"><s>285₽</s></span>
-                  <span class="slider-card__new-price">265₽</span>
-                  <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                <div class="slider-card-info-wrapper">
+                  <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
+                  <h3 class="slider-card__title">Лавандовый Латте</h3>
+                  <p class="slider-card__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                    лавандовым
+                    сиропом унесёт вас прямо на вершину Радужных гор</p>
+                  <div class="slider-card__price-wrapper">
+                    <span class="slider-card__old-price"><s>285₽</s></span>
+                    <span class="slider-card__new-price">265₽</span>
+                    <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <ul class="slider-card__marker-list">
-            <li class="slider-card__marker-item"></li>
-            <li class="slider-card__marker-item slider-card__marker-item--current"></li>
-            <li class="slider-card__marker-item"></li>
-          </ul>
-        </li>
-        <li class="slider__item slider-card slider-card--black">
-          <div class="container">
-            <div class="slider-card-wrapper">
-              <div class="slider-card-img-flex">
-                <div class="slider-card-img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/espresso-slider-desktop.webp 1x, img/espresso-slider-desktop-2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/espresso-slider-tablet.webp 1x, img/espresso-slider-tablet-2x.webp 2x">
-                    <source type="image/webp"
-                      srcset="img/espresso-slider-mobile.webp 1x, img/espresso-slider-mobile-2x.webp 2x">
+          </li>
+          <li class="slider__item slider-card slider-card--black swiper-slide">
+            <div class="container">
+              <div class="slider-card-wrapper">
+                <div class="slider-card-img-flex">
+                  <div class="slider-card-img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/espresso-slider-desktop.webp 1x, img/espresso-slider-desktop-2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/espresso-slider-tablet.webp 1x, img/espresso-slider-tablet-2x.webp 2x">
+                      <source type="image/webp"
+                        srcset="img/espresso-slider-mobile.webp 1x, img/espresso-slider-mobile-2x.webp 2x">
 
-                    <source media="(min-width: 1440px)"
-                      srcset="img/espresso-slider-desktop.png, img/espresso-slider-desktop-2x.png 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/espresso-slider-tablet.png, img/espresso-slider-tablet-2x.png 2x">
-                    <img class="slider-card__img" src="img/espresso-slider-mobile.png"
-                      srcset="img/espresso-slider-mobile-2x.png 2x" width="280" height="280" alt="">
-                  </picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/espresso-slider-desktop.png, img/espresso-slider-desktop-2x.png 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/espresso-slider-tablet.png, img/espresso-slider-tablet-2x.png 2x">
+                      <img class="slider-card__img" src="img/espresso-slider-mobile.png"
+                        srcset="img/espresso-slider-mobile-2x.png 2x" width="280" height="280" alt="">
+                    </picture>
+                  </div>
                 </div>
-              </div>
-              <div class="slider-card-info-wrapper">
-                <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
-                <h3 class="slider-card__title">Тройной Эспрессо</h3>
-                <p class="slider-card__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
-                  Колумбии покажет вам, что такое настоящая бодрость</p>
-                <div class="slider-card__price-wrapper">
-                  <span class="slider-card__old-price"><s>395₽</s></span>
-                  <span class="slider-card__new-price">375₽</span>
-                  <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                <div class="slider-card-info-wrapper">
+                  <span class="slider-card__text-new text-addition text-addition--slider">Новинка!</span>
+                  <h3 class="slider-card__title">Тройной Эспрессо</h3>
+                  <p class="slider-card__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо
+                    из
+                    Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <div class="slider-card__price-wrapper">
+                    <span class="slider-card__old-price"><s>395₽</s></span>
+                    <span class="slider-card__new-price">375₽</span>
+                    <a class="slider-card__button button button--slider" href="#">Заказать</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <ul class="slider-card__marker-list">
-            <li class="slider-card__marker-item"></li>
-            <li class="slider-card__marker-item"></li>
-            <li class="slider-card__marker-item slider-card__marker-item--current"></li>
-          </ul>
-        </li>
-      </ul>
+          </li>
+        </ul>
+        <div class="slider__pagination-wrapper">
+          <div class="slider__pagination"></div>
+        </div>
+        <button class="slider__button slider__button--before" type="button">
+          <svg class="slider__button-icon slider__button-icon--before" width="11" height="20" viewBox="0 0 11 20"
+            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.71661 0L11 1.32082L2.56677 10L11 18.6792L9.71661 20L0 10L9.71661 0Z" />
+          </svg>
+          <span class="visually-hidden">Переключение
+            слайдера
+            назад</span></button>
+        <button class="slider__button slider__button--next" type="button">
+          <svg class="slider__button-icon slider__button-icon--next" width="11" height="20" viewBox="0 0 11 20"
+            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.28339 0L0 1.32082L8.43323 10L0 18.6792L1.28339 20L11 10L1.28339 0Z" />
+          </svg>
+          <span class="visually-hidden">Переключение
+            слайдера
+            вперед</span></button>
+      </div>
     </section>
     <section class="advantages">
       <div class="container">
@@ -288,7 +280,7 @@
                   <ul class="form__list">
                     <li class="form__list-item form__list-item--radio">
                       <label class="form__label-radio">
-                        <input class=" form__radio visually-hidden" type="radio" name="type-of-milk" value="any-milk"
+                        <input class="visually-hidden form__radio" type="radio" name="type-of-milk" value="any-milk"
                           checked>
                         <span class="form__control-mark"></span>
                         <span class="form__text form__text--color-radio">Неважно</span>
@@ -296,7 +288,7 @@
                     </li>
                     <li class="form__list-item form__list-item--radio">
                       <label class="form__label-radio">
-                        <input class=" form__radio visually-hidden" type="radio" name="type-of-milk"
+                        <input class="visually-hidden form__radio" type="radio" name="type-of-milk"
                           value="animal-milk">
                         <span class="form__control-mark"></span>
                         <span class="form__text form__text--color-radio">Только животное</span>
@@ -304,14 +296,14 @@
                     </li>
                     <li class="form__list-item form__list-item--radio">
                       <label class="form__label-radio">
-                        <input class=" form__radio visually-hidden" type="radio" name="type-of-milk" value="plant-milk">
+                        <input class="visually-hidden form__radio" type="radio" name="type-of-milk" value="plant-milk">
                         <span class="form__control-mark"></span>
                         <span class="form__text form__text--color-radio">Только растительное</span>
                       </label>
                     </li>
                     <li class="form__list-item form__list-item--radio">
                       <label class="form__label-radio">
-                        <input class=" form__radio visually-hidden" type="radio" name="type-of-milk"
+                        <input class="visually-hidden form__radio" type="radio" name="type-of-milk"
                           value="without-milk" disabled>
                         <span class="form__control-mark"></span>
                         <span class="form__text form__text--color-radio">Без молока</span>
@@ -680,6 +672,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./leaflet/leaflet.js"></script>
   <script src="./js/script.js" defer></script>
 </body>
